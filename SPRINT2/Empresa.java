@@ -16,10 +16,39 @@ public class Empresa {
     }
 
 //GETTERS Y SETTERS//
-    
+    //NIT
+        public void setNit(String nit) {
+            this.nit = nit;
+        }
 
+        public String getNit() {
+            return nit;
+        }
 
+    //nombre
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
 
+        public String getNombre() {
+            return nombre;
+        }
 
+    //dirección
+        public void setDireccion(String direccion) {
+            this.direccion = direccion;
+        }
 
+        public String getDireccion() {
+            return direccion;
+        }
+
+    //teléfono
+        public void setTelefono(String telefono) {
+            this.telefono = telefono;
+        }
+
+        public String getTelefono() {
+            return telefono;
+        }
 }
