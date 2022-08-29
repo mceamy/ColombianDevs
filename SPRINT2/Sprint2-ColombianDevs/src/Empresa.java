@@ -16,6 +16,15 @@ public class Empresa {
     }
 
 //GETTERS Y SETTERS//
+    //idempresa
+    public void setIdEmpresa(long idEmpresa) {
+        this.idEmpresa = idEmpresa;
+    }
+
+    public long getIdEmpresa() {
+        return idEmpresa;
+    }
+
     //NIT
         public void setNit(String nit) {
             this.nit = nit;
