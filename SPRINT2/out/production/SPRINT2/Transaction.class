@@ -3,7 +3,7 @@
 /// tenía problemas de conexión
 
 
-public class transaction {
+public class Transaction {
     private long transactionId;
     private String concept;
     private float Amount ;
