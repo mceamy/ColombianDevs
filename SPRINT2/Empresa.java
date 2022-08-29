@@ -1,16 +1,16 @@
 public class Empresa {
 
-    private long id;
+    private long idEmpresa;
     private String nit;
-    private String nombre;
+    private String nombreEmpresa;
     private String direccion;
     private String telefono;
 
 //CONSTRUCTOR//
-    public Empresa(long id, String nit, String nombre, String direccion, String telefono) {
-        this.id = id;
+    public Empresa(long idEmpresa, String nit, String nombreEmpresa, String direccion, String telefono) {
+        this.idEmpresa = idEmpresa;
         this.nit = nit;
-        this.nombre = nombre;
+        this.nombreEmpresa = nombreEmpresa;
         this.direccion = direccion;
         this.telefono = telefono;
     }
@@ -26,12 +26,12 @@ public class Empresa {
         }
 
     //nombre
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
+        public void setNombreEmpresa(String nombreEmpresa) {
+            this.nombreEmpresa = nombreEmpresa;
         }
 
-        public String getNombre() {
-            return nombre;
+        public String getNombreEmpresa() {
+            return nombreEmpresa;
         }
 
     //dirección
