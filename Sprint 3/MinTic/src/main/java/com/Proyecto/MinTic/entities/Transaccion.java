@@ -1,3 +1,5 @@
+package com.Proyecto.MinTic.entities;
+
 public class Transaccion {
 
     private long id;
@@ -6,7 +8,6 @@ public class Transaccion {
     private String nombreEmpleado;
 
     //CONSTRUCTOR//
-
     public Transaccion(long id, String concepto, float cantidad, String nombreEmpleado) {
         this.id = id;
         this.concepto = concepto;
@@ -15,7 +16,6 @@ public class Transaccion {
     }
 
     //GETTERS Y SETTERS//
-
     public long getId() {
         return id;
     }

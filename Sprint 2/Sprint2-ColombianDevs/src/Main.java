@@ -36,14 +36,14 @@ public class Main {
         System.out.println(resumenEmpleadoCambios);
 
 
-        /*MovimientoDinero Movimiento = new MovimientoDinero();
-        Movimiento.setMonto(-155000);
+        Transaccion Movimiento = new Transaccion(152, "Agua", 250000, "Juan");
+        Movimiento.setCantidad(-155000);
         Movimiento.setConcepto("Recibo de Luz");
-        Movimiento.setEmpleado("Santiago Gonzalez");
+        Movimiento.setNombreEmpleado("Santiago Gonzalez");
 
-        String resumenMovimiento = (Movimiento.getMonto() + "-" + Movimiento.getConcepto() + "-"
-                + Movimiento.getEmpleado());
-        */
+        String resumenMovimiento = (Movimiento.getCantidad() + "-" + Movimiento.getConcepto() + "-"
+                + Movimiento.getNombreEmpleado());
+
 
     }
 }
