@@ -1,27 +1,55 @@
 package com.Proyecto.MinTic.entities;
 
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name = "Transaccion")
 public class Transaccion {
 
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long idTransaccion;
+    @Column(name = "concepto")
     private String concepto;
+    @Column(name = "cantidad")
     private float cantidad;
-    private String nombreEmpleado;
+
+    @ManyToOne
+    @JoinColumn(name = "idEmpresa")
+    private Empresa empresa;
+
+    //@JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "idEmpleado")
+    private Empleado empleado;
+
+    private Date creaAt;
+    private Date actualizaAt;
+
 
     //CONSTRUCTOR//
-    public Transaccion(long id, String concepto, float cantidad, String nombreEmpleado) {
-        this.id = id;
+    public Transaccion() {
+    }
+
+    public Transaccion(long idTransaccion, String concepto, float cantidad, Empresa empresa,
+                       Empleado empleado, Date creaAt, Date actualizaAt) {
+        this.idTransaccion = idTransaccion;
         this.concepto = concepto;
         this.cantidad = cantidad;
-        this.nombreEmpleado = nombreEmpleado;
+        this.empresa = empresa;
+        this.empleado = empleado;
+        this.creaAt = creaAt;
+        this.actualizaAt = actualizaAt;
     }
 
     //GETTERS Y SETTERS//
-    public long getId() {
-        return id;
+    public long getIdTransaccion() {
+        return idTransaccion;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setIdTransaccion(long idTransaccion) {
+        this.idTransaccion = idTransaccion;
     }
 
     public String getConcepto() {
@@ -40,11 +68,35 @@ public class Transaccion {
         this.cantidad = cantidad;
     }
 
-    public String getNombreEmpleado() {
-        return nombreEmpleado;
+    public Empresa getEmpresa() {
+        return empresa;
     }
 
-    public void setNombreEmpleado(String nombreEmpleado) {
-        this.nombreEmpleado = nombreEmpleado;
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
+    public Empleado getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
+    }
+
+    public Date getCreaAt() {
+        return creaAt;
+    }
+
+    public void setCreaAt(Date creaAt) {
+        this.creaAt = creaAt;
+    }
+
+    public Date getActualizaAt() {
+        return actualizaAt;
+    }
+
+    public void setActualizaAt(Date actualizaAt) {
+        this.actualizaAt = actualizaAt;
     }
 }
